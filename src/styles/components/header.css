@@ -1,0 +1,214 @@
+
+/* ========================================
+   HEADER COMPONENT - PROFESSIONAL BANKING UI
+   ======================================== */
+
+.header-appbar {
+  background-color: transparent;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08) !important;
+  position: relative;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  animation: slideDown 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.header-appbar::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 83%;
+  height: 100%;
+  background: linear-gradient(135deg, #0d4689 0%, #3a76b9 100%);
+  z-index: -1;
+  transition: all 0.3s ease;
+}
+
+.header-appbar::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, #4fbbc8 0%, #0d4689 100%);
+}
+
+.header-menu-item-button {
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 16px;
+  letter-spacing: 0.5px;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.header-menu-item-button::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 3px;
+  background: #4fbbc8;
+  transition: width 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.header-menu-item-button:hover::before {
+  width: 100%;
+}
+
+.header-menu-item-button:hover {
+  transform: translateY(-2px);
+}
+
+.header-toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 24px;
+  transition: padding 0.3s ease;
+}
+
+.header-logo {
+  font-weight: bold;
+  cursor: pointer;
+  width: 140px;
+  height: 45px;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
+}
+
+.header-logo:hover {
+  transform: scale(1.05);
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.15));
+}
+
+.header-spacer {
+  flex-grow: 1;
+}
+
+.header-menus {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.header-menu-item button {
+  font-weight: 500;
+  text-transform: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+}
+
+.header-menu-item button:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.MuiMenu-paper {
+  min-width: 180px;
+  border-radius: 8px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12) !important;
+  margin-top: 8px;
+}
+
+.MuiMenuItem-root {
+  padding: 12px 20px;
+  font-size: 15px;
+  transition: all 0.2s ease;
+}
+
+.MuiMenuItem-root:hover {
+  background-color: rgba(13, 70, 137, 0.08);
+  transform: translateX(4px);
+}
+
+.navbar-icon {
+  color: #0d4689;
+  top: -4px;
+  transition: all 0.3s ease;
+}
+
+.navbar-icon:hover {
+  transform: scale(1.1);
+  color: #3a76b9;
+}
+
+/* ========================================
+   RESPONSIVE STYLES
+   ======================================== */
+
+@media (max-width: 1200px) {
+  .header-appbar::before {
+    width: 80%;
+  }
+
+  .header-menu-item-button {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 991px) {
+  .header-appbar::before {
+    width: 74%;
+  }
+
+  .header-menu-item-button {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 890px) {
+  .header-appbar::before {
+    width: 69%;
+  }
+}
+
+@media (max-width: 750px) {
+  .header-appbar::before {
+    width: 60%;
+  }
+
+  .header-toolbar {
+    padding: 8px 16px;
+  }
+
+  .header-logo {
+    width: 120px;
+    height: 38px;
+  }
+}
+
+@media (max-width: 556px) {
+  .header-logo {
+    text-align: center;
+    width: 100px;
+    height: 32px;
+  }
+
+  .header-appbar::before {
+    content: none;
+  }
+
+  .header-appbar {
+    background: none;
+    text-align: center;
+  }
+
+  .header-toolbar {
+    padding: 6px 12px;
+  }
+
+}

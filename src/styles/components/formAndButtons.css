@@ -1,0 +1,739 @@
+/* ========================================
+   FORM AND BUTTON COMPONENTS
+   PROFESSIONAL BANKING UI
+   ======================================== */
+
+/* ========================================
+   FORM CONTAINER
+   ======================================== */
+
+.form-container {
+  max-width: 100%;
+  box-sizing: border-box;
+  animation: fadeIn 0.5s ease-in;
+}
+
+.form-container .MuiFormControlLabel-root {
+  align-items: center;
+  transition: all 0.3s ease;
+}
+
+.form-container .MuiFormControlLabel-root:hover {
+  transform: translateX(2px);
+}
+
+.form-navigation {
+  display: flex;
+  justify-content: space-between;
+  gap: 5px;
+}
+
+/* ========================================
+   NAVIGATION BUTTONS
+   ======================================== */
+
+.navigation-buttons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 40px;
+  gap: 20px;
+}
+
+.next-btn,
+.prev-btn {
+  border: none;
+  padding: 8px 12px;
+  border-radius: 10px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  letter-spacing: 0.5px;
+  position: relative;
+  overflow: hidden;
+}
+
+.next-btn {
+  background: linear-gradient(135deg, #0d4689 0%, #3a76b9 100%);
+  color: white;
+  box-shadow: 0 4px 12px rgba(13, 70, 137, 0.3);
+}
+
+.next-btn::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.2);
+  transform: translate(-50%, -50%);
+  transition:
+    width 0.6s,
+    height 0.6s;
+}
+
+.next-btn:hover::before {
+  width: 300px;
+  height: 300px;
+}
+
+.next-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(13, 70, 137, 0.4);
+}
+
+.next-btn:active {
+  transform: translateY(-1px);
+}
+
+.prev-btn {
+  background: linear-gradient(135deg, #6c757d 0%, #5a6268 100%);
+  color: white;
+  box-shadow: 0 4px 12px rgba(108, 117, 125, 0.3);
+}
+
+.prev-btn:hover {
+  background: linear-gradient(135deg, #5a6268 0%, #6c757d 100%);
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(108, 117, 125, 0.4);
+}
+
+/* ========================================
+   VERIFY BUTTON
+   ======================================== */
+
+.verify-btn {
+  background: linear-gradient(135deg, #0d4689 0%, #3a76b9 100%);
+  color: white;
+  border: none;
+  padding: 7px 22px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 4px 12px rgba(13, 70, 137, 0.2);
+  letter-spacing: 0.5px;
+}
+
+.verify-btn:hover {
+  background: linear-gradient(135deg, #3a76b9 0%, #0d4689 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(13, 70, 137, 0.3);
+}
+
+.verify-btn:disabled {
+  background: linear-gradient(135deg, #28a745 0%, #20c997 100%);
+  color: white;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: 0 2px 8px rgba(40, 167, 69, 0.3);
+}
+
+.verify-btn.disabled-initial {
+  background: linear-gradient(135deg, #9e9e9e 0%, #757575 100%);
+  color: white;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+/* ========================================
+   SECTION TITLE
+   ======================================== */
+
+.section-title {
+  font-size: 24px;
+  font-weight: 700;
+  background: linear-gradient(135deg, #0d4689 0%, #4fbbc8 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 40px;
+  text-align: center;
+  position: relative;
+  display: block;
+  width: 100%;
+  animation: slideInRight 0.6s ease-out;
+}
+
+.section-title::after {
+  content: '';
+  position: absolute;
+  bottom: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(90deg, #0d4689 0%, #4fbbc8 100%);
+  border-radius: 2px;
+  animation: pulse 2s infinite;
+}
+
+/* ========================================
+   CONSENT SECTION
+   ======================================== */
+
+.consent-title {
+  font-size: 16px;
+  color: white;
+  background: linear-gradient(135deg, #0d4689 0%, #3a76b9 100%);
+  position: relative;
+  display: inline-block;
+  left: 0px;
+  top: -38px;
+  border-radius: 8px;
+  padding: 6px 16px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  box-shadow: 0 4px 12px rgba(13, 70, 137, 0.25);
+}
+
+.consent-section {
+  border: 2px solid rgba(13, 70, 137, 0.15);
+  border-radius: 12px;
+  padding: 24px;
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(10px);
+  transition: all 0.3s ease;
+  margin-bottom: 24px;
+}
+
+.consent-section:hover {
+  border-color: rgba(13, 70, 137, 0.3);
+  box-shadow: 0 8px 24px rgba(13, 70, 137, 0.1);
+}
+
+/* ========================================
+   FORM GROUPS
+   ======================================== */
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+  width: 100%;
+  animation: fadeIn 0.5s ease-in;
+}
+
+.form-group label {
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: #333;
+  font-size: 15px;
+  transition: color 0.3s ease;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  padding: 8px 16px;
+  font-size: 16px;
+  border-radius: 8px;
+  /* border: 2px solid #e0e6ed; */
+  width: 100%;
+  box-sizing: border-box;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  background-color: white;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: #0d4689;
+  /* box-shadow: 0 0 0 3px rgba(13, 70, 137, 0.1); */
+  background-color: rgba(13, 70, 137, 0.02);
+}
+
+.form-group input:hover,
+.form-group select:hover,
+.form-group textarea:hover {
+  border-color: #3a76b9;
+}
+
+/* ========================================
+   CUSTOM TEXTFIELD
+   ======================================== */
+
+.custom-textfield .MuiInput-underline:before {
+  border-bottom: 2px solid rgba(0, 0, 0, 0.2);
+  transition: border-color 0.3s ease;
+}
+
+.custom-textfield .MuiInput-underline:after {
+  border-bottom: 2px solid #0d4689;
+}
+
+.custom-textfield .MuiInput-underline:hover:not(.Mui-disabled):before {
+  border-bottom: 2px solid #3a76b9;
+}
+
+/* ========================================
+   AUTOFILL STYLES
+   ======================================== */
+
+input:-webkit-autofill {
+  background-color: #e8f0fe !important;
+  -webkit-box-shadow: 0 0 0px 1000px #e8f0fe inset !important;
+  -webkit-text-fill-color: #000 !important;
+  caret-color: #000;
+  transition: background-color 5000s ease-in-out 0s;
+}
+
+/* ========================================
+   PLAIN INPUT STYLES
+   ======================================== */
+
+.plain-date-input,
+.plain-input,
+.plain-select {
+  border: none;
+  border-bottom: 2px solid #e0e6ed;
+  padding: 10px 4px;
+  font-size: 16px;
+  width: 100%;
+  background: transparent;
+  border-radius: 0;
+  transition: all 0.3s ease;
+}
+
+.plain-date-input:focus,
+.plain-input:focus,
+.plain-select:focus {
+  outline: none;
+  border-bottom-color: #0d4689;
+  background-color: rgba(13, 70, 137, 0.02);
+}
+
+.plain-date-input:hover,
+.plain-input:hover,
+.plain-select:hover {
+  border-bottom-color: #3a76b9;
+}
+
+.plain-input-group label {
+  font-weight: 600;
+  margin-bottom: 6px;
+  display: block;
+  color: #333;
+  font-size: 15px;
+}
+
+/* ========================================
+   ERROR MESSAGES
+   ======================================== */
+
+.error {
+  color: #dc3545;
+  font-size: 13px;
+  margin-top: 6px;
+  display: flex;
+  align-items: center;
+  animation: fadeIn 0.3s ease-in;
+}
+
+.error::before {
+  content: '⚠ ';
+  margin-right: 4px;
+}
+
+/* ========================================
+   MOBILE INPUT CONTAINER
+   ======================================== */
+
+.mobile-input-container {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+/* ========================================
+   ACCOUNT SECTION
+   ======================================== */
+
+.account-section {
+  margin-bottom: 28px;
+  padding: 24px;
+  background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+  border-radius: 12px;
+  border: 2px solid rgba(13, 70, 137, 0.1);
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  /* transform-style: preserve-3d; */
+  perspective: 1000px;
+  flex-wrap: wrap;
+}
+
+.account-section:hover {
+  border-color: rgba(13, 70, 137, 0.2);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  transform: translateY(-2px) rotateX(1deg);
+}
+
+.account-question {
+  /* margin: 0 0 16px 0; */
+  font-size: 15px;
+  font-weight: 600;
+  color: #333;
+}
+
+.account-option {
+  text-align: center;
+  cursor: pointer;
+  font-size: 5px;
+  color: #333;
+  padding: 0px 10px;
+  background-color: white;
+  border: 2px solid #e0e6ed;
+  border-radius: 12px;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  font-weight: 500;
+}
+
+.account-option:hover {
+  border-color: #3a76b9;
+  background-color: #f5f7fa;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(13, 70, 137, 0.15);
+}
+
+.account-option.selected {
+  border-color: #0d4689;
+  background: linear-gradient(135deg, rgba(13, 70, 137, 0.05), rgba(79, 187, 200, 0.05));
+  font-weight: 600;
+  box-shadow: 0 4px 12px rgba(13, 70, 137, 0.2);
+}
+
+/* ========================================
+   CHECKBOX LABELS
+   ======================================== */
+.checkbox-label {
+  color: #4a4a4a;
+  transition: all 0.3s ease;
+  font-size: 14px;
+  line-height: 1.6;
+  display: inline-block;
+  cursor: pointer;
+}
+
+/* Checked state */
+.checkbox-label.checked {
+  font-weight: 600;
+}
+
+/* Read More link styling */
+.checkbox-label a {
+  color: #1E88E5;
+  /* Bright blue */
+  text-decoration: none;
+  font-weight: 500;
+  margin-left: 5px;
+  position: relative;
+  transition: color 0.3s ease, transform 0.2s ease;
+}
+
+/* Hover effect for Read More link */
+.checkbox-label a:hover {
+  color: #0D47A1;
+  /* Deep Blue */
+  text-decoration: underline;
+  transform: scale(1.05);
+}
+
+
+/* Account option padding */
+.account-option {
+  padding: 5px 20px;
+}
+
+
+.selectAllCheck {
+  margin-left: -10px;
+}
+
+/* ========================================
+   RADIO BUTTONS
+   ======================================== */
+
+.account-radio.Mui-checked {
+  color: #0d4689;
+}
+
+/* ========================================
+   INFO BUTTONS
+   ======================================== */
+
+.uan-info-btn,
+.info-btn {
+  color: #4fbbc8;
+  transition: all 0.3s ease;
+}
+
+.uan-info-btn {
+  position: absolute;
+  margin-left: 92px;
+  margin-top: -25px;
+}
+
+.uan-info-btn:hover,
+.info-btn:hover {
+  color: #3a8c96;
+  transform: scale(1.1);
+}
+
+.info-btn {
+  position: relative;
+  right: 32px;
+  top: -20px;
+}
+
+/* ========================================
+   ADDRESS COMPONENTS
+   ======================================== */
+
+.address-grid {
+  margin-top: 20px;
+}
+
+.address-card {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 20px;
+  border: 2px solid #e0e6ed;
+  border-radius: 12px;
+  cursor: pointer;
+  min-width: 200px;
+  position: relative;
+  background: white;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  transform-style: preserve-3d;
+}
+
+.address-card:hover {
+  border-color: #3a76b9;
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 8px 20px rgba(13, 70, 137, 0.15);
+}
+
+.address-card.selected {
+  border-color: #0d4689;
+  background: linear-gradient(135deg, rgba(13, 70, 137, 0.05), rgba(79, 187, 200, 0.05));
+  box-shadow: 0 8px 20px rgba(13, 70, 137, 0.2);
+  transform: scale(1.02);
+}
+
+.address-edit-btn {
+  padding: 1px;
+  position: absolute;
+  top: -9px;
+  right: -9px;
+  background: linear-gradient(135deg, #f5f7fa, #ffffff);
+  border: 2px solid #e0e6ed;
+  transition: all 0.3s ease;
+}
+
+.address-edit-btn:hover {
+  background: linear-gradient(135deg, #0d4689, #3a76b9);
+  border-color: #0d4689;
+  color: white;
+  transform: scale(1.1);
+}
+
+.source-label {
+  position: absolute;
+  top: -10px;
+  left: 12px;
+  font-size: 12px;
+  font-weight: 700;
+  background: linear-gradient(135deg, #0d4689, #4fbbc8);
+  color: white;
+  padding: 4px 12px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(13, 70, 137, 0.3);
+}
+
+.address-text {
+  margin-left: 8px;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+/* ========================================
+   FAMILY OWNED WRAPPER
+   ======================================== */
+
+.family-owned-wrapper {
+  display: flex;
+  align-items: baseline;
+}
+
+.tooltip-wrapper {
+  position: relative;
+}
+
+/* ========================================
+   RESPONSIVE STYLES
+   ======================================== */
+
+@media (max-width: 899px) {
+  .section-title {
+    font-size: 24px;
+    margin-bottom: 32px;
+  }
+
+  .account-section {
+    padding: 20px;
+  }
+
+  .consent-section {
+    padding: 20px;
+  }
+}
+
+@media (max-width: 600px) {
+  .navigation-buttons {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .next-btn,
+  .prev-btn {
+    width: 100%;
+    padding: 10px 24px;
+    font-size: 14px;
+  }
+
+  .verify-btn {
+    padding: 8px 20px;
+    font-size: 13px;
+  }
+
+  .section-title {
+    font-size: 22px;
+    margin-bottom: 28px;
+  }
+
+  .account-section,
+  .consent-section {
+    padding: 16px;
+  }
+
+  .account-question {
+    font-size: 16px;
+  }
+
+  .form-group label {
+    font-size: 14px;
+  }
+
+  .address-card {
+    padding: 16px;
+  }
+
+  .mobile-input-container {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .verify-btn {
+    width: 100%;
+  }
+
+  .account-option {
+    padding: 1px 20px;
+  }
+
+  .checkbox-label {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+
+  .next-btn,
+  .prev-btn {
+    padding: 9px 20px;
+    font-size: 13px;
+  }
+
+  .section-title {
+    font-size: 20px;
+  }
+
+  .consent-title {
+    font-size: 14px;
+    padding: 4px 12px;
+  }
+}
+
+/* Toggle Switch Style */
+.toggle-switch {
+  position: relative;
+  display: inline-block;
+  width: 48px;
+  /* Toggle width */
+  height: 24px;
+  /* Toggle height */
+  vertical-align: middle;
+}
+
+.toggle-switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* Slider background */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: 0.4s ease;
+  border-radius: 34px;
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Slider knob */
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 18px;
+  /* knob height */
+  width: 18px;
+  /* knob width */
+  left: 3px;
+  /* horizontally centered padding */
+  top: 3px;
+  /* vertically centered padding */
+  background-color: #fff;
+  transition: 0.4s ease;
+  border-radius: 50%;
+}
+
+/* ✅ Active (YES / ON) */
+.toggle-switch input:checked+.slider {
+  background: linear-gradient(135deg, #0d4689 0%, #3a76b9 100%);
+  box-shadow: 0 0 6px rgba(13, 70, 137, 0.4);
+}
+
+/* Move knob when active */
+.toggle-switch input:checked+.slider:before {
+  transform: translateX(24px);
+  /* adjusted for 48px total width */
+}
+
+/* Hover effect */
+.toggle-switch:hover .slider {
+  box-shadow: 0 0 8px rgba(13, 70, 137, 0.15);
+}

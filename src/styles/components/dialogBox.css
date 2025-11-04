@@ -1,0 +1,279 @@
+
+/* ========================================
+   DIALOG BOX COMPONENTS
+   PROFESSIONAL BANKING DESIGN
+   ======================================== */
+
+.custom-dialog-main .MuiDialog-paper {
+  border-radius: 16px;
+  box-shadow: 0 16px 48px rgba(13, 70, 137, 0.2);
+  border: 3px solid transparent;
+  background-clip: padding-box;
+  position: relative;
+  overflow: hidden;
+  transform-style: preserve-3d;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.custom-dialog-main .MuiDialog-paper:hover {
+  box-shadow: 0 20px 56px rgba(13, 70, 137, 0.25);
+  transform: scale(1.01);
+}
+
+.custom-dialog-main .MuiDialog-paper::before {
+  content: '';
+  position: absolute;
+  inset: -3px;
+  border-radius: 16px;
+  padding: 3px;
+  background: linear-gradient(135deg, #0d4689, #4fbbc8);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+}
+
+.dialog-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  background: linear-gradient(135deg, #0d4689 0%, #4fbbc8 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  padding: 24px 28px 20px;
+  border-bottom: 2px solid rgba(13, 70, 137, 0.1);
+}
+
+.dialog-content {
+  font-size: 15px;
+  line-height: 1.7;
+  color: #555;
+  text-align: left;
+  padding: 28px 28px 24px;
+  max-height: 60vh;
+  overflow-y: auto;
+}
+
+.dialog-content::-webkit-scrollbar {
+  width: 8px;
+}
+
+.dialog-content::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 4px;
+}
+
+.dialog-content::-webkit-scrollbar-thumb {
+  background: linear-gradient(135deg, #0d4689, #4fbbc8);
+  border-radius: 4px;
+}
+
+.dialog-content::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(135deg, #4fbbc8, #0d4689);
+}
+
+.dialog-heading {
+  font-size: 17px;
+  font-weight: 700;
+  margin-top: 24px;
+  margin-bottom: 16px;
+  color: #0d4689;
+  position: relative;
+  padding-left: 12px;
+}
+
+.dialog-heading::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 4px;
+  height: 80%;
+  background: linear-gradient(135deg, #0d4689, #4fbbc8);
+  border-radius: 2px;
+}
+
+.dialog-body {
+  margin-bottom: 14px;
+  line-height: 1.7;
+  font-size: 15px;
+  color: #555;
+}
+
+.dialog-body strong {
+  color: #333;
+  font-weight: 600;
+}
+
+.dialog-body a {
+  color: #0d4689;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  border-bottom: 1px solid transparent;
+}
+
+.dialog-body a:hover {
+  color: #4fbbc8;
+  border-bottom-color: #4fbbc8;
+}
+
+.terms-list {
+  margin-left: 20px;
+  margin-bottom: 18px;
+}
+
+.terms-list p {
+  margin-bottom: 12px;
+  text-indent: -20px;
+  padding-left: 20px;
+  font-size: 15px;
+  line-height: 1.7;
+  color: #555;
+}
+
+.dialog-actions {
+  display: flex;
+  justify-content: flex-end;
+  padding: 16px 28px 24px;
+  gap: 12px;
+  border-top: 2px solid rgba(13, 70, 137, 0.1);
+}
+
+.dialog-actions .MuiButton-root {
+  text-transform: none;
+  font-size: 15px;
+  font-weight: 600;
+  padding: 10px 24px;
+  border-radius: 8px;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.dialog-actions .MuiButton-outlined {
+  border: 2px solid #e0e6ed;
+  color: #666;
+}
+
+.dialog-actions .MuiButton-outlined:hover {
+  border-color: #0d4689;
+  background: rgba(13, 70, 137, 0.05);
+  color: #0d4689;
+}
+
+/* Branch search specific styles */
+.branch-address-title {
+  font-weight: 700 !important;
+  margin-bottom: 20px;
+}
+
+.branch-add-tabs {
+  padding: 0px 28px !important;
+  border-bottom: 2px solid rgba(13, 70, 137, 0.1);
+}
+
+.branch-add-tabs .MuiTab-root {
+  font-weight: 600;
+  font-size: 15px;
+  transition: all 0.3s ease;
+}
+
+.branch-add-tabs .MuiTab-root:hover {
+  color: #0d4689;
+}
+
+.branch-add-tabs .Mui-selected {
+  color: #0d4689 !important;
+}
+
+.branch-add-tabs .MuiTabs-indicator {
+  height: 3px;
+  background: linear-gradient(90deg, #0d4689, #4fbbc8);
+}
+
+.branch-add-list {
+  padding-left: 0px !important;
+  padding-right: 0px !important;
+  transition: all 0.3s ease;
+  border-radius: 8px;
+}
+
+.branch-add-list:hover {
+  background: rgba(13, 70, 137, 0.03);
+}
+
+.branch-add-list-item span {
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.branch-near-title {
+  text-align: center;
+  margin: 16px 0;
+  font-size: 17px;
+  font-weight: 700;
+  color: #0d4689;
+}
+
+.branch-add-filter {
+  font-size: 14px;
+}
+
+.branch-add-filter li {
+  font-size: 14px;
+  transition: all 0.3s ease;
+}
+
+.branch-add-filter li:hover {
+  background: rgba(13, 70, 137, 0.08);
+}
+
+.branch-add-selct-label {
+  position: absolute;
+  top: -20px;
+  font-size: 14px;
+  left: 0px;
+  font-weight: 600;
+  color: #333;
+}
+
+/* ========================================
+   RESPONSIVE STYLES
+   ======================================== */
+
+@media (max-width: 600px) {
+  .dialog-title {
+    font-size: 1.25rem;
+    padding: 20px 20px 16px;
+  }
+
+  .dialog-content {
+    padding: 20px;
+    font-size: 14px;
+  }
+
+  .dialog-heading {
+    font-size: 16px;
+    margin-top: 20px;
+  }
+
+  .dialog-body {
+    font-size: 14px;
+  }
+
+  .dialog-actions {
+    padding: 12px 20px 20px;
+    flex-direction: column;
+  }
+
+  .dialog-actions .MuiButton-root {
+    width: 100%;
+  }
+
+  .branch-add-tabs {
+    padding: 0px 20px !important;
+  }
+  .branch-selector{
+    display: block;
+  }
+}
