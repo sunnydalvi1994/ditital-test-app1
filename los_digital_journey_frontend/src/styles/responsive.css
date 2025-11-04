@@ -1,0 +1,231 @@
+
+/* ========================================
+   RESPONSIVE STYLES
+   PROFESSIONAL BANKING UI
+   ======================================== */
+
+/* Small devices (phones, less than 600px) */
+@media (max-width: 600px) {
+  /* General improvements */
+  * {
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  /* Account grid */
+  .account-grid {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+  }
+
+  /* OTP digit inputs */
+  .otp-digit {
+    width: 45px;
+    height: 45px;
+    font-size: 18px;
+    border-width: 2px;
+  }
+
+  /* OTP body */
+  .otp-body {
+    padding: 24px 14px;
+  }
+
+  /* Wrapper adjustments */
+  .wrapper-container {
+    padding: 20px 16px;
+    margin-bottom: 70px;
+  }
+
+  /* Navigation buttons */
+  .navigation-buttons {
+    flex-direction: column;
+    margin-top: 32px;
+  }
+
+  .next-btn,
+  .prev-btn {
+    width: 100%;
+  }
+
+  /* Button groups */
+  .btn-group-item {
+    font-size: 14px;
+    padding: 8px 16px;
+  }
+
+  /* Form inputs */
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
+    font-size: 16px; /* Prevent zoom on iOS */
+    padding: 12px 14px;
+  }
+
+  /* Section titles */
+  .section-title {
+    font-size: 22px;
+    margin-bottom: 28px;
+  }
+
+  /* Consent sections */
+  .consent-section {
+    padding: 16px;
+  }
+
+  /* Address cards */
+  .address-card {
+    padding: 16px;
+    min-width: 100%;
+  }
+}
+
+/* Extra small devices (phones, less than 400px) */
+@media (max-width: 400px) {
+  /* Account grid */
+  .account-grid {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  /* OTP inputs */
+  .otp-digit {
+    width: 40px;
+    height: 40px;
+    font-size: 16px;
+  }
+
+  .otp-body {
+    padding: 20px 5px;
+  }
+
+  /* Wrapper */
+  .wrapper-container {
+    padding: 16px 12px;
+  }
+
+  /* Buttons */
+  .next-btn,
+  .prev-btn,
+  .verify-btn {
+    padding: 7px 12px;
+    font-size: 13px;
+  }
+
+  /* Section title */
+  .section-title {
+    font-size: 20px;
+  }
+
+  /* Consent title */
+  .consent-title {
+    font-size: 14px;
+    padding: 4px 12px;
+  }
+}
+
+/* Small tablets (portrait) */
+@media (min-width: 601px) and (max-width: 768px) {
+  .wrapper-container {
+    padding: 28px 24px;
+  }
+
+  .account-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+
+  .btn-group-item {
+    padding: 10px 18px;
+  }
+}
+
+/* Medium devices (tablets, 769px to 899px) */
+@media (min-width: 769px) and (max-width: 899px) {
+  .wrapper-main {
+    max-width: 85%;
+  }
+
+  .wrapper-container {
+    padding: 30px 28px;
+  }
+
+  .section-title {
+    font-size: 26px;
+  }
+}
+
+/* Touch device optimizations */
+@media (hover: none) and (pointer: coarse) {
+  /* Increase tap targets */
+  .btn-group-item,
+  .next-btn,
+  .prev-btn,
+  .verify-btn {
+    min-height: 44px; /* iOS recommended touch target */
+  }
+
+  /* Remove hover effects on touch devices */
+  .btn-group-item:hover,
+  .next-btn:hover,
+  .prev-btn:hover,
+  .verify-btn:hover {
+    transform: none;
+  }
+
+  /* Add active state instead */
+  .btn-group-item:active,
+  .next-btn:active,
+  .prev-btn:active,
+  .verify-btn:active {
+    transform: scale(0.97);
+    animation: tapFeedback 0.3s ease-out;
+  }
+
+  @keyframes tapFeedback {
+    0% {
+      box-shadow: 0 0 0 0 rgba(13, 70, 137, 0.4);
+    }
+    100% {
+      box-shadow: 0 0 0 10px rgba(13, 70, 137, 0);
+    }
+  }
+}
+
+/* Landscape orientation adjustments */
+@media (max-width: 899px) and (orientation: landscape) {
+  .wrapper-container {
+    margin-bottom: 60px;
+  }
+
+  .footer {
+    padding: 10px 16px;
+  }
+
+  .section-title {
+    margin-bottom: 24px;
+  }
+}
+
+/* High DPI displays */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  /* Crisp borders and shadows */
+  .wrapper-container,
+  .offer-paper,
+  .account-section {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
+/* Reduced motion preference */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

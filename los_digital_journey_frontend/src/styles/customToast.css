@@ -1,0 +1,83 @@
+/* 🌊 Blue Glow Toast - Elegant & Trustworthy Look */
+.Toastify__toast--success {
+  background: linear-gradient(135deg, #1e3a8a, #2563eb) !important;
+  color: #f9fafb !important;
+  border-radius: 12px !important;
+  box-shadow: 0 6px 20px rgba(37, 99, 235, 0.35);
+  font-weight: 500 !important;
+  padding: 14px 18px !important;
+  letter-spacing: 0.3px !important;
+  backdrop-filter: blur(8px);
+  transition: all 0.3s ease-in-out;
+}
+
+.Toastify__toast--success:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 24px rgba(37, 99, 235, 0.5);
+}
+
+.Toastify__progress-bar--success {
+  background: #93c5fd !important;
+}
+
+.Toastify__toast-icon--success {
+  background: rgba(255, 255, 255, 0.15) !important;
+  border-radius: 50% !important;
+  padding: 6px !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Tick SVG glow */
+.Toastify__toast-icon--success svg {
+  fill: #ffffff !important; /* bright white tick */
+  width: 18px;
+  height: 18px;
+  filter: drop-shadow(0 0 2px rgba(255,255,255,0.8)); /* subtle glow */
+}
+/* Optional hover effect on tick */
+.Toastify__toast-icon--success:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 10px rgba(37, 99, 235, 0.7);
+}
+
+
+/* Tablets (portrait and landscape) */
+@media (max-width: 1024px) {
+  .Toastify__toast--success {
+    font-size: 14px !important;
+    padding: 12px 16px !important;
+    border-radius: 10px !important;
+    box-shadow: 0 5px 16px rgba(37, 99, 235, 0.3);
+  }
+
+  .Toastify__toast-icon--success svg {
+    width: 16px;
+    height: 16px;
+  }
+}
+
+/* Mobile devices */
+@media (max-width: 600px) {
+  .Toastify__toast--success {
+    font-size: 13px !important;
+    padding: 10px 14px !important;
+    border-radius: 8px !important;
+    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.25);
+    letter-spacing: 0.2px !important;
+  }
+
+  .Toastify__toast-icon--success {
+    padding: 4px !important;
+  }
+
+  .Toastify__toast-icon--success svg {
+    width: 14px;
+    height: 14px;
+  }
+
+  .Toastify__progress-bar--success {
+    height: 3px !important;
+  }
+}
