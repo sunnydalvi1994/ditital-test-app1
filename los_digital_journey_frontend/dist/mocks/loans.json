@@ -1,6 +1,0 @@
-{
-  "Home": ["Individual", "Non-Individual", "NRI"],
-  "Personal": ["Salaried", "Self-Employed"],
-  "Vehicle": ["2-wheeler", "4-wheeler"],
-  "Education": ["Undergraduate", "Postgraduate"]
-}
